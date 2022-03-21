@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_58872_needit_needit">u_what_needed=other^EQ<item display_value="Other" endquery="false" field="u_what_needed" goto="false" newquery="false" operator="=" or="false" value="other"/>
+        <conditions table="x_58872_needit_needit">assigned_to=0a826bf03710200044e0bfc8bcbe5d7a^u_when_neededONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^EQ<item display_table="sys_user" display_value="Adela Cervantsz" endquery="false" field="assigned_to" goto="false" newquery="false" operator="=" or="false" value="0a826bf03710200044e0bfc8bcbe5d7a"/>
+            <item endquery="false" field="u_when_needed" goto="false" newquery="false" operator="ON" or="false" value="Today@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -20,25 +21,26 @@
         <script_true><![CDATA[function onCondition() {
     // Display a message under the Other field to explain what to put in the
     // Other field.
-    g_form.showFieldMsg('u_other','Briefly explain what you need.','info');
+    g_form.showFieldMsg('u_choice_1','Are you ok with it?','info');
+
    }]]></script_true>
         <set_values/>
-        <short_description>NeedIt show or hide Other field</short_description>
+        <short_description>Change de date or de assigned to </short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-03-18 09:40:46</sys_created_on>
+        <sys_created_on>2022-03-18 11:56:16</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>4541a971879e49105072a9f83cbb354c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>NeedIt show or hide Other field</sys_name>
+        <sys_id>fd700ab1871289105072a9f83cbb356f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Change de date or de assigned to </sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_ui_policy_4541a971879e49105072a9f83cbb354c</sys_update_name>
+        <sys_update_name>sys_ui_policy_fd700ab1871289105072a9f83cbb356f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-18 13:05:35</sys_updated_on>
+        <sys_updated_on>2022-03-18 12:52:58</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <ui_type>0</ui_type>
         <view/>
